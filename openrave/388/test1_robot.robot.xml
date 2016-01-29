@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+
+<Robot name="testrobot">
+  <KinBody makejoinedlinksadjacent="1">
+
+    <translation>0.0 0.0 0.0</translation>
+
+    <Body name="base" type="dynamic">
+      <Geom type="box">
+        <extents>0.2 0.2 0.2 </extents>
+        <translation>0.0 0.0 0.0</translation>
+        <quat>1.0 0.0 0.0 0.0</quat>
+        <diffusecolor>0.792157 0.819608 0.933333</diffusecolor>
+        <transparency>0.0</transparency>
+      </Geom>
+    </Body>
+
+    <Body name="arm1_link1" type="dynamic">
+      <Geom type="sphere">
+        <radius>0.2</radius>
+        <translation>0.0 0.3 1.0</translation>
+        <quat>1.0 0.0 0.0 0.0</quat>
+        <diffusecolor>0.792157 0.819608 0.933333</diffusecolor>
+        <transparency>0.0</transparency>
+      </Geom>
+    </Body>
+    <Joint name="arm1_joint1" type="hinge" enable="true">
+      <Body>base</Body>
+      <Body>arm1_link1</Body>
+      <offsetfrom>base</offsetfrom>
+      <axis>0.0 0.0 1.0</axis>
+      <maxvel>0</maxvel>
+      <limitsrad>0.000000 3.141593</limitsrad>
+    </Joint>
+
+    <Body name="arm2_link1" type="dynamic">
+      <Geom type="sphere">
+        <radius>0.2</radius>
+        <translation>0.0 -0.3 1.0</translation>
+        <quat>1.0 0.0 0.0 0.0</quat>
+        <diffusecolor>0.792157 0.819608 0.933333</diffusecolor>
+        <transparency>0.0</transparency>
+      </Geom>
+    </Body>
+    <Joint name="arm2_joint1" type="hinge" enable="true">
+      <Body>base</Body>
+      <Body>arm2_link1</Body>
+      <offsetfrom>base</offsetfrom>
+      <axis>0.0 0.0 1.0</axis>
+      <maxvel>0</maxvel>
+      <limitsrad>0.000000 3.141593</limitsrad>
+    </Joint>
+
+  </KinBody>
+</Robot>
